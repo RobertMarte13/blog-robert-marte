@@ -1,20 +1,23 @@
 import { article } from "../types/types";
 
+import "../css/articlesAll.css";
+
 const ArticleAllList = ({ article }: article) => {
-  const { portada, title, Author, Date } = article;
+  const { logo_lenguaje, title, Author, Date } = article;
 
   console.log(article);
 
   return (
-    <div>
-      <h2>articles</h2>
-      <header className="header-article">
-        <img className="portada" src={portada} alt="portadas" />
-        <h2 className="title">{title}</h2>
-        <h4 className="author">Author del articulo: {Author}</h4>
-        <p className="fecha">Fecha: {Date}</p>
-      </header>
-    </div>
+    <section className="content-article-all">
+      <article>
+        <img className="portada" src={logo_lenguaje} alt="portadas" />
+        <div className="content-article-info-main">
+          <h2 className="title">{title}</h2>
+          <h4 className="author">Author del articulo: {Author}</h4>
+          <p className="fecha">Fecha: {Date}</p>
+        </div>
+      </article>
+    </section>
   );
 };
 

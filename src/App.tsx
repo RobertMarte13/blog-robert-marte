@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Article from "./components/Article.tsx";
 import NavBar from "./components/NavBar.tsx";
 import About from "./components/About.tsx";
-import "./App.css";
 import Contact from "./components/Contact.tsx";
+import "./App.css";
 
 function App() {
   return (

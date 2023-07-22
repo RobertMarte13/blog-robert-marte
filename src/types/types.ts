@@ -6,12 +6,15 @@ export type articlesBasicInfo = {
   Lenguaje: string;
   Author: string;
   portada: string;
+  logo_lenguaje: string;
   description: string;
   content: string;
 };
 
 export type ids = {
   ids: number;
+  isActive: boolean;
+  setIsActive: boolean
 };
 
 export type article = {
@@ -23,6 +26,7 @@ export type article = {
     Lenguaje: string;
     Author: string;
     portada: string;
+    logo_lenguaje: string;
     description: string;
     content: string;
   };

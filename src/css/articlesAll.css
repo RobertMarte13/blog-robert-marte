@@ -1,0 +1,34 @@
+.content-article-all article {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    background: #dfdfdf;
+}
+
+.content-article-all article .portada {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.article-details-info {
+    width: 100%;
+    position: absolute;
+    background: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 100;
+}
+
+.article-details-info img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}

@@ -5,18 +5,19 @@ import GetArticleInfo from "./subComponents/GetArticlesInfo.tsx";
 
 function Article() {
   const [id, setId] = useState(0);
+  const [isActive, setIsActive] = useState(false);
 
   return (
-    <div style={{zIndex: 10}}>
+    <div className="box-home">
       <h1>Blog de Robert Marte</h1>
-      <div>
+      <div onClick={() => setIsActive(!isActive)}>
         {articles.map((article, index) => (
           <div key={index} onClick={() => setId(article.id)}>
             <ArticleAllList article={article} />
           </div>
         ))}
       </div>
-      <GetArticleInfo ids={id} />
+      <GetArticleInfo ids={id} isActive={isActive} setIsActive={setIsActive} />
     </div>
   );
 }
