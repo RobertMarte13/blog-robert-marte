@@ -3,6 +3,7 @@ import { Ids } from "../../types/types";
 import Footer from "../Footer";
 
 function GetArticleInfo({ ids, isActive, setIsActive }: Ids) {
+
   const clickArticle = articles.filter((allId) => allId.id === ids);
 
   function removeClickArticle() {
@@ -42,6 +43,9 @@ function GetArticleInfo({ ids, isActive, setIsActive }: Ids) {
       ) : (
         <h2>...Cargando</h2>
       )}
+      {
+        isActive ? <Footer /> : null
+      }
     </div>
   );
 }

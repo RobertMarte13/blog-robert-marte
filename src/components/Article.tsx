@@ -3,22 +3,29 @@ import { articles } from "../services/articles.ts";
 import ArticleAllList from "./ArticleAllList.tsx";
 import GetArticleInfo from "./subComponents/GetArticlesInfo.tsx";
 
-function Article({getIsActive}) {
+function Article({ getIsActive }) {
   const [id, setId] = useState(0);
   const [isActive, setIsActive] = useState(false);
+  const [pageNum, setPageNum] = useState(1);
 
   getIsActive(isActive)
 
   return (
     <div className="box-home">
-      <h1>Blog de Robert Marte</h1>
+      <h1>Articulos</h1>
       <div onClick={() => setIsActive(!isActive)}>
         {articles.map((article, index) => (
           <div key={index} onClick={() => setId(article.id)}>
-            <ArticleAllList article={article} />
+            {
+              article.pagina === pageNum 
+                ? <ArticleAllList article={article} />
+                : null
+            }
           </div>
         ))}
       </div>
+      <button onClick={() => setPageNum(1)}>1</button>
+      <button onClick={() => setPageNum(2)}>2</button>
       <GetArticleInfo ids={id} isActive={isActive} setIsActive={setIsActive} />
     </div>
   );
