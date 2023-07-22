@@ -3,9 +3,11 @@ import { articles } from "../services/articles.ts";
 import ArticleAllList from "./ArticleAllList.tsx";
 import GetArticleInfo from "./subComponents/GetArticlesInfo.tsx";
 
-function Article() {
+function Article({getIsActive}) {
   const [id, setId] = useState(0);
   const [isActive, setIsActive] = useState(false);
+
+  getIsActive(isActive)
 
   return (
     <div className="box-home">

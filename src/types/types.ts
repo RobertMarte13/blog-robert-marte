@@ -1,4 +1,4 @@
-export type articlesBasicInfo = {
+export type ArticlesBasicInfo = {
   id: number;
   pagina: number;
   title: string;
@@ -11,13 +11,13 @@ export type articlesBasicInfo = {
   content: string;
 };
 
-export type ids = {
+export type Ids = {
   ids: number;
   isActive: boolean;
-  setIsActive: boolean
+  setIsActive: (isActive: boolean) => boolean
 };
 
-export type article = {
+export type Article = {
   article: {
     id: number;
     pagina: number;
