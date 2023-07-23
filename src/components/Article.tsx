@@ -3,9 +3,9 @@ import { articles } from "../services/articles.ts";
 import ArticleAllList from "./ArticleAllList.tsx";
 import GetArticleInfo from "./subComponents/GetArticlesInfo.tsx";
 
-function Article({ getIsActive }) {
+function Article({ getIsActive }: {getIsActive(isActive: boolean): void}) {
   const [id, setId] = useState(0);
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState<boolean>(false);
   const [pageNum, setPageNum] = useState(1);
 
   getIsActive(isActive)

@@ -11,10 +11,10 @@ export type ArticlesBasicInfo = {
   content: string;
 };
 
-export type Ids = {
-  ids: number;
-  isActive: boolean;
-  setIsActive: (isActive: boolean) => boolean
+export type PropsGetArticlesInfo = {
+  ids: number,
+  isActive: boolean,
+  setIsActive(isActive: boolean): void
 };
 
 export type Article = {

@@ -1,9 +1,12 @@
 import { articles } from "../../services/articles";
-import { Ids } from "../../types/types";
+import { PropsGetArticlesInfo } from "../../types/types";
 import Footer from "../Footer";
 
-function GetArticleInfo({ ids, isActive, setIsActive }: Ids) {
-
+function GetArticleInfo({
+  ids,
+  isActive,
+  setIsActive,
+}: PropsGetArticlesInfo) {
   const clickArticle = articles.filter((allId) => allId.id === ids);
 
   function removeClickArticle() {
@@ -18,13 +21,15 @@ function GetArticleInfo({ ids, isActive, setIsActive }: Ids) {
       {clickArticle !== null ? (
         clickArticle.map((el, index) => (
           <div key={index}>
-            <buttom className="btn-back" onClick={() => removeClickArticle()}>
+            <button className="btn-back" onClick={() => removeClickArticle()}>
               Back
-            </buttom>
+            </button>
             <img src={el.portada} alt={`Portada ${el.Lenguaje}`} />
             <div className="content-info-article">
               <h2>{el.title}</h2>
-              <p><strong>Lenguaje:</strong> {el.Lenguaje}</p>
+              <p>
+                <strong>Lenguaje:</strong> {el.Lenguaje}
+              </p>
               <p>
                 <strong>Autor del articulo: </strong>
                 {el.Author}
@@ -43,9 +48,7 @@ function GetArticleInfo({ ids, isActive, setIsActive }: Ids) {
       ) : (
         <h2>...Cargando</h2>
       )}
-      {
-        isActive ? <Footer /> : null
-      }
+      {isActive ? <Footer /> : null}
     </div>
   );
 }
