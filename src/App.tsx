@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { Routes, Route } from "react-router-dom";
-import Article from "./components/Article.tsx";
+import Article from "./components/articlesComponenst/Article.tsx";
 import NavBar from "./components/NavBar.tsx";
 import About from "./components/About.tsx";
 import Contact from "./components/Contact.tsx";

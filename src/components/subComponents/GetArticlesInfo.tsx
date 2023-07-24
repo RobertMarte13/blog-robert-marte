@@ -1,4 +1,4 @@
-import { articles } from "../../services/articles";
+import { articlesFilter } from "../../services/articles";
 import { PropsGetArticlesInfo } from "../../types/types";
 import Footer from "../Footer";
 
@@ -7,7 +7,7 @@ function GetArticleInfo({
   isActive,
   setIsActive,
 }: PropsGetArticlesInfo) {
-  const clickArticle = articles.filter((allId) => allId.id === ids);
+  const clickArticle = articlesFilter.filter((allId) => allId.id === ids);
 
   function removeClickArticle() {
     return setIsActive(!isActive);

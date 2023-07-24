@@ -1,6 +1,6 @@
-import { Article } from "../types/types";
+import { Article } from "../../types/types";
 
-import "../css/articlesAll.css";
+import "../../css/articlesAll.css"
 
 const ArticleAllList = ({ article }: Article) => {
   const { logo_lenguaje, title, Author, Date } = article;
