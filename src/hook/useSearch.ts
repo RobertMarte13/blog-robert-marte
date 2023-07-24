@@ -3,6 +3,7 @@ import {useState} from 'react'
 
 const useSearch = () => {
   const [busqueda, setBusqueda] = useState<string>("");
+  const [isActive, setIsActive] = useState(false);
   let filtrado
 
   //Validador de busqueda!
@@ -13,10 +14,18 @@ const useSearch = () => {
     });
   }
 
+  function removeClickArticle() {
+    setBusqueda("");
+    setIsActive(false);
+  }
+
   return {
     setBusqueda,
     busqueda,
-    filtrado
+    filtrado,
+    removeClickArticle,
+    isActive,
+    setIsActive
   };
 };
 

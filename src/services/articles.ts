@@ -105,16 +105,13 @@ const articles: ArticlesBasicInfo[] = [
     portada: portadaJavaScript,
     logo_lenguaje: logoJavascript, 
     description:
-      "Este articulo tratara de dar una breve definición de lo que es html y para que sirve.",
+      "Este articulo tratara de dar una breve definición de lo que es  Metodo de Crypto: randomUUID() y para que sirve.",
     content:
-      `
-      El método randomUUID() de la interfaz Crypto se usa para generar un UUID v4 usando un generador de números aleatorios criptográficamente seguro.
-
-      /* Assuming that self.crypto.randomUUID() is available */
-
-      let uuid = self.crypto.randomUUID();
-      console.log(uuid); // for example "36b8f84d-df4e-4d49-b662-bcde71a8764f"
-      `,
+      ' El método randomUUID() de la interfaz Crypto se usa para generar un UUID v4 usando un generador de números aleatorios criptográficamente seguro.',
+    code: { 
+      code: 'let uuid = self.crypto.randomUUID();',
+      consoleLog: 'console.log(uuid); // Resultado --> "36b8f84d-df4e-4d49-b662-bcde71a8764f"'
+    }
   }
 ];
 

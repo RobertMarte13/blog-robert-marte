@@ -2,11 +2,7 @@ import { articlesFilter } from "../../services/articles";
 import { PropsGetArticlesInfo } from "../../types/types";
 import Footer from "../Footer";
 
-function GetArticleInfo({
-  ids,
-  isActive,
-  setIsActive,
-}: PropsGetArticlesInfo) {
+function GetArticleInfo({ ids, isActive, setIsActive }: PropsGetArticlesInfo) {
   const clickArticle = articlesFilter.filter((allId) => allId.id === ids);
 
   function removeClickArticle() {
@@ -42,6 +38,45 @@ function GetArticleInfo({
                 {el.description}
               </p>
               <p>{el.content}</p>
+              {el.code !== undefined ? (
+                <div>
+                  <div className="content-code">
+                    <code>
+                      {el.code.code}
+                      <br />
+                      {el.code.consoleLog}
+                    </code>
+                  </div>
+                  <br />
+                  {el.code2 !== undefined ? (
+                    <div className="content-code">
+                      <code>
+                        {el.code2?.code}
+                        <br />
+                        {el.code2?.consoleLog}
+                      </code>
+                    </div>
+                  ) : null}
+                  {el.code3 !== undefined ? (
+                    <div className="content-code">
+                      <code>
+                        {el.code3?.code}
+                        <br />
+                        {el.code3?.consoleLog}
+                      </code>
+                    </div>
+                  ) : null}
+                  {el.code4 !== undefined ? (
+                    <div className="content-code">
+                      <code>
+                        {el.code4?.code}
+                        <br />
+                        {el.code4?.consoleLog}
+                      </code>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
           </div>
         ))

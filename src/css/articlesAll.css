@@ -1,63 +1,106 @@
 .content-article-all article {
-    width: 100%;
-    height: 170px;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    padding: 10px;
-    margin-top: 10px;
-    background: #dfdfdf;
-    overflow: hidden;
-    border-radius: 10px;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  background: #6faae2;
+  color: white;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, .2);
 }
 
 .content-article-all article .portada {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 10px;
-    border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
 .content-article-all article .content-article-info-main {
-    width: 80%;
+  width: 80%;
 }
 
 .article-details-info {
-    width: 100%;
-    position: absolute;
-    background: white;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
-    z-index: 100;
-    margin-top: 10px;
+  width: 100%;
+  position: absolute;
+  background: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 100;
 }
 
 .article-details-info img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    margin-top: 10px;
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, .1);
+
 }
 
 .btn-back {
-    cursor: pointer;
-    padding: 10px 20px;
-    margin: 10px;
-    color: white;
-    background: red;
-    z-index: 1000;
-    border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px;
+  color: white;
+  background: red;
+  z-index: 1000;
+  border-radius: 5px;
+  border: none;
 }
 
 .content-info-article {
-    padding: 20px;
+  padding: 20px;
 }
 
 .content-info-article p {
-    padding: 10px 0px;
+  padding: 10px 0px;
+}
+
+.btn-paginacion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-paginacion button {
+  margin: 10px 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #bbbbbb;
+  background: none;
+  font-size: 18px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+.btn-paginacion button:hover {
+  transition: all .3s ease-in;
+  background: #bbbbbb;
+  color: white;
+}
+
+.title-paginacion {
+  padding-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content-code {
+  background: #bbbbbb;
+  border-radius: 10px;
+  padding: 10px;
+  color: #282828;
+  font-size: 1.2em;
 }

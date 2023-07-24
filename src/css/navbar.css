@@ -1,7 +1,7 @@
 .header-navbar {
     width: 100%;
     padding: 10px;
-    background: #dfdfdf;
+    background: #6faae2;
     margin-bottom: 30px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
@@ -20,7 +20,7 @@
 .header-navbar .links {
     margin: 10px;
     text-decoration: none;
-    color: #242424;
+    color: white;
     font-size: 1.2em;
     text-transform: capitalize;
     font-weight: 600;
@@ -28,5 +28,5 @@
 
 .header-navbar .links:hover {
     text-decoration: underline;
-    color: rgba(31, 203, 255, 0.969);
+    color: rgba(185, 239, 255, 0.969);
 }

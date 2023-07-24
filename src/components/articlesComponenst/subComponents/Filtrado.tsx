@@ -1,4 +1,5 @@
 import { ArticlesBasicInfo } from "../../../types/types";
+import Footer from "../../Footer";
 
 const Filtrado = ({
   isActive,
@@ -37,6 +38,7 @@ const Filtrado = ({
           </div>
         </div>
       ))}
+      <Footer />
     </div>
   );
 };

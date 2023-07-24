@@ -9,6 +9,24 @@ export type ArticlesBasicInfo = {
   logo_lenguaje: string;
   description: string;
   content: string;
+  content2?: string;
+  content3?: string;
+  code?: {
+    code: string,
+    consoleLog: string
+  }
+  code2?: {
+    code: string,
+    consoleLog: string
+  }
+  code3?: {
+    code: string,
+    consoleLog: string
+  }
+  code4?: {
+    code: string,
+    consoleLog: string
+  }
 };
 
 export type PropsGetArticlesInfo = {

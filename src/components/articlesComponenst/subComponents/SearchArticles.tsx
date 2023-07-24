@@ -1,18 +1,12 @@
-import { useState } from "react";
 import useSearch from "../../../hook/useSearch.ts";
 import Filtrado from "./Filtrado.tsx";
 import '../../../css/search.css'
 
 
 const SearchArticles = () => {
-  const [isActive, setIsActive] = useState(false);
+  
 
-  const { filtrado, busqueda, setBusqueda } = useSearch();
-
-  function removeClickArticle() {
-    setBusqueda("");
-    setIsActive(false);
-  }
+  const { filtrado, busqueda, setBusqueda, isActive, setIsActive, removeClickArticle } = useSearch();
 
   return (
     <div>

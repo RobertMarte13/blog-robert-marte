@@ -1,7 +1,6 @@
 .box-home {
     position: relative;
     padding: 0 10px;
-    margin-bottom: 50px;
 }
 
 .footer-main {
@@ -11,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #bdbdbd;
+    background: #6faae2;
     flex-direction: column;
 }
 

@@ -5,7 +5,6 @@ import NavBar from "./components/NavBar.tsx";
 import About from "./components/About.tsx";
 import Contact from "./components/Contact.tsx";
 import "./App.css";
-import Footer from "./components/Footer.tsx";
 
 function App() {
   const [active, setActive] = useState(false)
@@ -18,16 +17,12 @@ function App() {
       <main>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Article getIsActive={getIsActive} />} />
+          <Route path="/" element={<Article active={active} getIsActive={getIsActive} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
       </main>
-
-      <div style={active ? { display: 'none', width: '100%' } : { display: 'block', width: '100%' }}>
-        <Footer />
-      </div>
     </div>
   );
 }
