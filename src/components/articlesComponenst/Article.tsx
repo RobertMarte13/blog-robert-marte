@@ -18,6 +18,8 @@ function Article({
   const [isActive, setIsActive] = useState<boolean>(false);
   const [pageNum, setPageNum] = useState(1);
 
+  const [filtroActive, setFiltroActive] = useState<boolean>(false);
+
   getIsActive(isActive);
 
   return (
@@ -25,18 +27,24 @@ function Article({
       <SearchArticles />
       <h1 style={{ textAlign: "center" }}>Articulos</h1>
       {/* <Paginacion setPageNum={setPageNum} /> */}
-      <div onClick={() => setIsActive(!isActive)}>
-        {articlesFilter.map((article, index) => (
-          <div key={index} onClick={() => setId(article.id)}>
-            {article.pagina === pageNum ? (
-              <ArticleAllList article={article} />
-            ) : null}
-          </div>
-        ))}
-      </div>
+          ? <div onClick={() => setIsActive(!isActive)}>
+          {articlesFilter.map((article, index) => (
+            <div key={index} onClick={() => setId(article.id)}>
+              {article.pagina === pageNum ? (
+                <ArticleAllList article={article} />
+              ) : null}
+            </div>
+          ))}
+        </div>
+      {/* {
+        filtroActive
+          : null
+      } */}
+      
       <p>Página: {pageNum}</p>
       <Paginacion setPageNum={setPageNum} />
       <GetArticleInfo ids={id} isActive={isActive} setIsActive={setIsActive} />
+      <Filtros setFiltroActive={setFiltroActive} filtroActive={filtroActive} />
       <div
         style={
           active
@@ -44,7 +52,6 @@ function Article({
             : { display: "block", width: "100%" }
         }
       >
-        <Filtros />
         <Footer />
       </div>
     </div>
