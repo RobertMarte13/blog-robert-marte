@@ -1,0 +1,43 @@
+.content-filtros {
+  width: 100%;
+}
+
+.content-filtros h3 {
+  text-align: center;
+  padding-top: 10px;
+  
+}
+
+.content-filtros ul {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-filtros ul li {
+  font-size: x-large;
+}
+
+.content-filtros li p {
+  padding: 10px 25px;
+  margin: 5px;
+  border: 2px solid #d1d1d1;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-filtros li p:hover {
+  border-color: #6faae2;
+}
+
+.content-filtros p img{
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}

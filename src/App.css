@@ -1,6 +1,7 @@
 .box-home {
     position: relative;
     padding: 0 10px;
+    min-height: 100vh;
 }
 
 .footer-main {

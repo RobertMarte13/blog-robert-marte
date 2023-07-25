@@ -1,6 +1,6 @@
-import { articlesFilter } from "../../services/articles";
-import { PropsGetArticlesInfo } from "../../types/types";
-import Footer from "../Footer";
+import { articlesFilter } from "../../../services/articles";
+import { PropsGetArticlesInfo } from "../../../types/types";
+import Footer from "../../Footer";
 
 function GetArticleInfo({ ids, isActive, setIsActive }: PropsGetArticlesInfo) {
   const clickArticle = articlesFilter.filter((allId) => allId.id === ids);
