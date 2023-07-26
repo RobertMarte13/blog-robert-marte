@@ -1,6 +1,6 @@
 export const portadaJavaScript: string = "https://www.ma-no.org/cache/galleries/contents-1103/860-300/javascript-for-intermediates-users-impjpg.webp"
 
-export const portadaReactJs: string = "https://res.cloudinary.com/practicaldev/image/fetch/s--goETGOXU--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/x3x5w638kkixi9s3h3vw.gif"
+export const portadaReactJs: string = "https://miro.medium.com/v2/resize:fit:1200/1*y6C4nSvy2Woe0m7bWEn4BA.png"
 
 export const portadaHTML: string = "https://webhostingespanol.com/wp-content/uploads/2015/10/html-logo.png"
 

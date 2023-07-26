@@ -4,6 +4,8 @@ import {useState} from 'react'
 const useSearch = () => {
   const [busqueda, setBusqueda] = useState<string>("");
   const [isActive, setIsActive] = useState(false);
+  const [active, setActive] = useState(false);
+
   let filtrado
 
   //Validador de busqueda!
@@ -19,13 +21,19 @@ const useSearch = () => {
     setIsActive(false);
   }
 
+  function getIsActive(bool: boolean) {
+    return setActive(bool);
+  }
+
   return {
     setBusqueda,
     busqueda,
     filtrado,
     removeClickArticle,
     isActive,
-    setIsActive
+    setIsActive,
+    getIsActive,
+    active
   };
 };
 

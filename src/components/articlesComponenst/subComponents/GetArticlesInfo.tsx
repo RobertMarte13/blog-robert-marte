@@ -16,7 +16,7 @@ function GetArticleInfo({ ids, isActive, setIsActive }: PropsGetArticlesInfo) {
     >
       {clickArticle !== null ? (
         clickArticle.map((el, index) => (
-          <div key={index}>
+          <div className="content-informacion" key={index}>
             <button className="btn-back" onClick={() => removeClickArticle()}>
               Back
             </button>

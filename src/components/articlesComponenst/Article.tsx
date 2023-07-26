@@ -3,7 +3,6 @@ import { articlesFilter } from "../../services/articles.ts";
 import ArticleAllList from "./ArticleAllList.tsx";
 import GetArticleInfo from "../articlesComponenst/subComponents/GetArticlesInfo.tsx";
 import Paginacion from "./subComponents/Paginacion.tsx";
-import SearchArticles from "./subComponents/SearchArticles.tsx";
 import Footer from "../Footer.tsx";
 import Filtros from "./subComponents/Filtros.tsx";
 
@@ -24,7 +23,6 @@ function Article({
 
   return (
     <div className="box-home">
-      <SearchArticles />
       <h1 style={{ textAlign: "center", fontSize: 22 }}>Últimos Artículos</h1>
       {/* <Paginacion setPageNum={setPageNum} /> */}
       <div onClick={() => setIsActive(!isActive)}>

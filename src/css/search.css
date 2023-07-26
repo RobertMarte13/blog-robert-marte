@@ -5,6 +5,19 @@
     left: 0;
     right: 0;
 }
+.link-search {
+    position: absolute;
+    top: 80px;
+    background: #f1f1f1;
+    padding: 10px;
+    border: 1px solid gray;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.link-search:hover {
+    text-decoration: underline;
+}
 
 .content-info-article {
     background: white;
@@ -12,4 +25,11 @@
 
 .portada {
     width: 100%;
+}
+
+@media screen and (max-width: 458px) {
+    .link-search {
+        top: 110px;
+        left: 110px;
+    }
 }

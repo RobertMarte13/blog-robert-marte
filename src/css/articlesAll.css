@@ -45,9 +45,6 @@
 
 .article-details-info img {
   width: 100%;
-  margin-top: 10px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, .1);
-
 }
 
 .btn-back {
@@ -82,18 +79,20 @@
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  border: 1px solid #bbbbbb;
+  border: 2px solid #bbbbbb;
   background: none;
   font-size: 18px;
   font-family: inherit;
   cursor: pointer;
   transition: all .3s ease-in;
+  color: #242424;
 }
 
 .btn-paginacion button:hover {
   transition: all .3s ease-in;
-  background: #bbbbbb;
+  background: #3991e3;
   color: white;
+  border: 2px solid #3991e3;
 }
 
 .title-paginacion {
