@@ -4,26 +4,20 @@ import "../css/form.css";
 import Footer from "./Footer";
 
 export const Contact = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  console.log(form)
+  const sendEmail = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
+    const contenido = form.current !== null ? form.current : ''
     emailjs
       .sendForm(
         "service_4lnmm9l",
         "template_98otalr",
-        form.current,
+        contenido,
         "AJN3ZYtQeJO6GN2t-"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
   };
 
   return (
