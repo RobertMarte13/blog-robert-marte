@@ -25,24 +25,23 @@ function Article({
   return (
     <div className="box-home">
       <SearchArticles />
-      <h1 style={{ textAlign: "center" }}>Articulos</h1>
+      <h1 style={{ textAlign: "center", fontSize: 22 }}>Últimos Artículos</h1>
       {/* <Paginacion setPageNum={setPageNum} /> */}
-          ? <div onClick={() => setIsActive(!isActive)}>
-          {articlesFilter.map((article, index) => (
-            <div key={index} onClick={() => setId(article.id)}>
-              {article.pagina === pageNum ? (
-                <ArticleAllList article={article} />
-              ) : null}
-            </div>
-          ))}
-        </div>
+      <div onClick={() => setIsActive(!isActive)}>
+        {articlesFilter.map((article, index) => (
+          <div key={index} onClick={() => setId(article.id)}>
+            {article.pagina === pageNum ? (
+              <ArticleAllList article={article} />
+            ) : null}
+          </div>
+        ))}
+      </div>
       {/* {
         filtroActive
           : null
       } */}
-      
-      <p>Página: {pageNum}</p>
-      <Paginacion setPageNum={setPageNum} />
+
+      <Paginacion setPageNum={setPageNum} pageNum={pageNum} />
       <GetArticleInfo ids={id} isActive={isActive} setIsActive={setIsActive} />
       <Filtros setFiltroActive={setFiltroActive} filtroActive={filtroActive} />
       <div
